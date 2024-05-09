@@ -1,0 +1,13 @@
+@keyframes slide_left {
+   0% {  transform: translateX(10px); }	
+ 100% {  transform: translateX(-10px); }	
+}
+@keyframes slide_right {
+   0% {  transform: translateX(-10px); }	
+ 100% {  transform: translateX(10px); }	
+}
+
+@keyframes plusAnimate {
+  0% {  transform: scale(.8); }	
+  100% {  transform: scale(1.5); }	
+}

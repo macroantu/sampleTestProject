@@ -1,0 +1,179 @@
+.select_all {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.select_all .input_wrapper2 {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.select_all .input_wrapper2 input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: var(--accent-color);
+}
+
+.select_all .input_wrapper2 label {
+  font-size: var(--text-3);
+  font-weight: 400;
+  color: var(--textColor);
+}
+
+.select_all .icons {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+.select_all .icons svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.select_all .icons svg path {
+  fill: var(--Accent-blue-900);
+}
+
+.select_all .icons svg:hover path {
+  fill: blue;
+}
+
+.select_all .icons .recycle_bin_icon,
+.select_all .icons .invite_icon,
+.select_all .icons .move_icon {
+  position: relative;
+  @include flex-centering;
+}
+
+.select_all .icons .recycle_bin_icon:before,
+.select_all .icons .invite_icon:before,
+.select_all .icons .move_icon:before {
+  content: "Bulk Delete";
+  position: absolute;
+  top: -28px ; 
+
+  background-color: blue;
+  font-size: 0.7rem;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  display: none;
+  width: min-content;
+  white-space: nowrap;
+}
+
+.select_all .icons .invite_icon:before {
+  content: "Invite Selected Contacts";
+}
+
+.select_all .icons .move_icon:before {
+  content: "Bulk Move";
+}
+
+.select_all .icons .recycle_bin_icon:hover::before,
+.select_all .icons .invite_icon:hover:before,
+.select_all .icons .move_icon:hover:before {
+  display: block;
+}
+
+/* ------------------------------------------------------ */
+
+.select_all .icons .move_icon {
+  position: relative;
+
+  &.clicked .move_dropmenu {
+    display: block !important ;
+  }
+}
+
+.select_all .icons .move_icon .move_dropmenu {
+  position: absolute;
+  background-color: var(--white);
+  top: 150%;
+  left: 0%;
+  z-index: 100;
+  box-shadow: 0px 0px 9px rgb(0 0 0 / 10%) !important;
+  border-radius: 12px;
+  padding: 0.875rem 0.75rem;
+  display: none;
+
+  li {
+    white-space: nowrap;
+    color: white;
+    padding: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: var(--Accent-blue-100);
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+    svg,
+    path {
+      fill: rgb(33, 65, 89) !important;
+    }
+    p {
+      color: var(--textColor);
+      font-size: var(--text-3);
+    }
+  }
+}
+
+/* ------------------------------------------------------ */
+.gift .buttons .icon.Move {
+  position: relative;
+
+  &.clicked .move_dropmenu {
+    display: block !important ;
+  }
+}
+
+.gift .buttons .icon.Move .move_dropmenu {
+  position: absolute;
+  background-color: var(--white);
+  top: 110%;
+  z-index: 100;
+  box-shadow: 0px 0px 9px rgb(0 0 0 / 10%) !important;
+  border-radius: 12px;
+  padding: 0.875rem 0.75rem;
+  display: none;
+  right: -12px;
+
+  li {
+    white-space: nowrap;
+    color: white;
+    padding: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: var(--Accent-blue-100);
+    }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+    svg,
+    path {
+      fill: rgb(33, 65, 89) !important;
+    }
+    p {
+      color: var(--textColor);
+      font-size: var(--text-3);
+    }
+  }
+}

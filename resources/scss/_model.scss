@@ -1,0 +1,202 @@
+/* --------------------- start Model -------------------- */
+/* ------------------------------------------------------ */
+.model {
+  position: fixed;
+  overflow-y: auto;
+  inset: 0;
+  background-color: #00000054;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.model.active {
+  display: flex;
+}
+
+.model .wrapper {
+  background-color: white;
+  margin-inline: 1rem;
+
+  //  margin-top: 9.7rem;
+  border-radius: 20px;
+  height: max-content;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: min(70ch, 100%);
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.model .wrapper .model_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0rem;
+}
+.model .wrapper .model_header h2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.model .wrapper .model_header h2 span {
+  font-size: 1.8rem;
+  color: var(--textColor);
+  font-weight: 500;
+  font-size: var(--text-title);
+}
+.model .wrapper .model_header svg path {
+  fill: var(--text_color) !important;
+}
+.model .wrapper .model_header h2 {
+  color: var(--gifts_color);
+}
+
+.model .model_paragraph {
+  font-size: 1rem;
+  color: #1c3149;
+}
+.model .wrapper .left {
+  position: relative;
+  width: 100%;
+}
+.model_content {
+ 
+  width: 100%;
+  form { 
+    width: 100%;
+  }
+  .profileImage {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 1000px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1000px;
+    }
+
+    .uploadIcon {
+      position: absolute;
+      inset: 0;
+      border-radius: 10000px;
+      @include flex-centering;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      .svgIcon {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: 0.5rem;
+        border-radius: 10000px;
+        border: 1px solid black;
+        background-color: rgba(15, 20, 25, 0.75);
+        @include flex-centering;
+        //  display: none;
+
+        &:hover {
+          background-color: rgba(39, 44, 48, 0.75);
+        }
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+      input {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 10000px;
+        cursor: pointer;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.model .savePhoto {
+  font-size: var(--text-3);
+  background-color: var(--Accent-blue-500);
+  border-radius: 10px;
+  color: var(--white);
+  text-align: center;
+  align-items: flex-end;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+  &:hover {
+    opacity: 0.85;
+  }
+  &:disabled {
+    background-color: var(--Grey-300);
+  }
+}
+
+.model .cancel {
+  background-color: var(--Grey-700) !important;
+}
+
+.model .close_icon {
+  cursor: pointer;
+}
+.model .close_icon:hover svg path {
+  fill: var(--accent-light);
+}
+
+.model_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .model_content {
+    flex-direction: row;
+  }
+}
+
+/* ------------------------------------------------------ */
+/* ---------------------- end model --------------------- */
+/* ------------------------------------------------------ */
+
+
+
+.model .buttons { 
+
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-left: auto;
+
+
+    .cancel , .fun_btn { 
+      background-color: var(--Grey-700) !important;
+      font-size: 14px;
+      color: var(--white);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+
+    .fun_btn { 
+      background-color: var(--Accent-blue-500) !important;
+    }
+}
+
+
