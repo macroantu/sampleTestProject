@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="model_content">
-                                you can't delete the last wishlist because you must have at least one Wishlist.
+                                Are you sure want to delete this wishlist?
                             </div>
                             <div class="buttons">
                                 <button type="button" class="cancel">Cancel</button>
@@ -76,7 +76,7 @@
                     <div class="model delete_wishlist_item_model ">
                         <div class="wrapper" style="margin-bottom:0">
                             <div class="model_header">
-                                <h2><span>Delete a wishlist</span> </h2>
+                                <h2><span>Delete a wishlist item</span> </h2>
                                 <div class="close_icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                                         <path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"></path>
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                             <div class="model_content">
-                                you can't delete the last wishlist because you must have at least one Wishlist.
+                                Are you sure want to delete this wishlist item? 
                             </div>
                             <div class="buttons">
                                 <button type="button" class="cancel">Cancel</button>
@@ -116,7 +116,7 @@
                                 <div class="buttons">
                                     <button type="button" class="cancel">Cancel</button>
                                     <button type="submit" class="fun_btn add_whishlist_btn active">
-                                        <span>Confirm1</span></button>
+                                        <span>Confirm</span></button>
                                 </div>
                             </form>
                         </div>
